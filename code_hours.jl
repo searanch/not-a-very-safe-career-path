@@ -1,19 +1,24 @@
-hours_before_julia = 796
+include("log.jl")
+hour_log()
 
-function hours_june()
-    
-    june_log = Dict("06/01/2022" => 1, "06/02/2022" => 2, "06/03/2022" =>2, "06/11/2022" =>2, 
-                "06/13/2022"=>1, "06/14/2022" => 2, "06/25/2022" =>1, "06/26/2022":0)
-    vals = collect(values(june_log))
-    tots = sum(vals)
 
-    println("So far in June 2022 I wrote code in Julia for $tots hours!")
+function progress(x)
+    three_year_goal = 2000
+    phase_1_hours = 796
+    mini_goal = 25
+    hours_now = x
+    calc = mini_goal - hours_now
+
+    println("In the next three years your goal is to write code for $three_year_goal hours.")
+    println("In phase one from September 2020-June 2022 you wrote code for $phase_1_hours hours.")
+    println("So far in code hours 2.0 you have wrote code for $hours_now hours. Way to go Liz!")
+
+
+    println("Just $calc more hours untill your mini goal! ")
 
 end
 
-hours_june()
+progress(19.5)
 
 
-#print(hours_before_julia)
-#june_log = Dict("06/01/2022" => 1, "06/02/2022" => 2, "06/03/2022" =>2, "06/11/2022" =>2, "06/13/2022"=>1, "06/14/2022" => 2)
-#tots = sum(june_log)
+                                                           
